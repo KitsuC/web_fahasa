@@ -1,0 +1,101 @@
+{{#if login}}
+<div class="admin mt-20">
+
+  <h2>Vui lòng đăng nhập để sử dụng chức năng này</h2>
+
+  <div>
+    <a class="sale-link" href='/login'>Đăng nhập</a>
+
+  </div>
+
+</div>
+{{else}}
+  <div class="wrapper">
+
+      <header>
+
+      </header>
+
+
+      <!-- ORDER -->
+
+
+      <main class="order">
+         <div class="container">
+            <div class="order-content">
+
+               <div class="order-nav">
+                  <h2>TÀI KHOẢN</h2>
+
+                  <ul>
+                     <li>
+                        <button>Bảng điều khiển tài khoản</button>
+                     </li>
+                     <li>
+                        <button>Thông tin tài khoản</button>
+                     </li>
+                     <li>
+                        <button>Sổ địa chỉ</button>
+                     </li>
+                     <li>
+                        <button style="color: #C92127;">Đơn hàng của tôi</button>
+                     </li>
+                     <li>
+                        <button>Sách theo bộ</button>
+                     </li>
+                     <li>
+                        <button>Tài khoản F-poin / Freeship</button>
+                     </li>
+                     <li>
+                        <button>Nhận xét của tôi</button>
+                     </li>
+                     <li>
+                        <button>Thông báo</button>
+                     </li>
+                     <li>
+                        <button>Đăng ký nhận tin điện tử</button>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="order-body">
+
+                  <h2>ĐƠN HÀNG CỦA TÔI</h2>
+
+                  <div class="order-product">
+                     <ul>
+                        <li>Mã đơn hàng</li>
+                        <li>Ngày mua</li>
+                        <li>Người nhận</li>
+                        <li>Tổng Tiền</li>
+                        <li>Trạng thái</li>
+                     </ul> 
+                     {{#each value}}
+                     <ul>
+                        <li>{{shortenId this._id}}</li>
+                        {{!-- Lấy ngày tháng năm hiện tại --}}
+                        <li>
+                           {{#dateFormat this.createdAt format="DD/MM/YYYY"}}
+                              {{this}}
+                           {{/dateFormat}}
+                        </li>
+                        <li>{{this.Name}}</li>
+                        <li> {{sumPrice this.cart}} đ</li>
+                        <li>{{this.Status}}</li>
+                        <button>Xem chi tiết</button>
+                     </ul>
+                     {{/each}}
+                  </div>
+
+               </div>
+
+            </div>
+         </div>
+      </main>
+
+   </div>
+{{/if}}
+
+<script>
+
+</script>

@@ -1,0 +1,39 @@
+<div class='wrap-form'>
+  <h2 class='title-lr'>Đăng ký</h2>
+  <form class='form-login' id='registerForm' action='/register' method='POST'>
+    <div class='mb-3'>
+      <label for='emailInput' class='form-label'>Vui lòng nhập Email</label>
+      <input type='email' class='form-control' name='email' id='emailInput' />
+      <p id='emailError' class='error-message'></p>
+    </div>
+    <div class='mb-3'>
+      <label for='usernameInput' class='form-label'>Vui lòng nhập tên người dùng</label>
+      <input
+        type='text'
+        class='form-control'
+        name='username'
+        id='usernameInput'
+      />
+      <p id='usernameError' class='error-message'></p>
+    </div>
+    <div class='mb-3'>
+      <label for='passwordInput' class='form-label'>Vui lòng nhập mật khẩu</label>
+      <input
+        type='password'
+        class='form-control'
+        name='password'
+        id='passwordInput'
+      />
+      <p id='passwordError' class='error-message'></p>
+    </div>
+    <span>Đã có tài khoản?<a href="/login"> Đăng nhập</a></span>
+    <input value='Đăng kí' type='submit' class='btn btn-primary btn-login' style="background-color: #c92127; border:none" />
+  </form>
+</div>
+
+<style>
+  .error-message { color: red; } .shake { animation: shake 0.5s; } @keyframes
+  shake { 10%, 90% { transform: translateX(-5px); } 20%, 80% { transform:
+  translateX(5px); } 30%, 50%, 70% { transform: translateX(-3px); } 40%, 60% {
+  transform: translateX(3px); } }
+</style>

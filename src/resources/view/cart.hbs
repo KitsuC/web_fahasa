@@ -1,0 +1,219 @@
+{{#if login}}
+<div class="admin mt-20">
+
+  <h2>Vui lòng đăng nhập để sử dụng chức năng này</h2>
+
+  <div>
+    <a class="sale-link" href='/login'>Đăng nhập</a>
+
+  </div>
+
+</div>
+{{else}}
+<div class='container'>
+  <h2 class='main-title'>GIỎ HÀNG ({{length data.cart}} sản phẩm)</h2>
+  <div class='main-box'>
+    <div class='main-box-left'>
+      <div class='main-cart-item'>
+        <div class='main-cart-item-left'>
+          {{!-- <p class='main-cart-item-left-box box-red'>
+
+          </p> --}}
+          <p>
+            ( {{length data.cart}} sản phẩm)
+          </p>
+        </div>
+        <div class='main-cart-item-right'>
+          <span>
+            số lượng 
+          </span>
+          <span>
+            Thành tiền
+          </span>
+        </div>
+      </div>
+      <div class='main-cart-list-product'>
+        {{#each data.cart}}
+          <div class='main-item-product pro'>
+            {{!-- <div class='product-box'>
+              <!-- Các phần tử khác -->
+            </div> --}}
+            <div class='main-item-product-img'>
+              <a href=''>
+                <img src='{{this.image}}' alt='' />
+              </a>
+            </div>
+            <div class='main-item-product-title'>
+              <div class='main-item-product-title-left'>
+                <p class='main-name-product'>
+                  {{this.name}}
+                </p>
+                <span class='main-product-money' money='{{this.price}}'>{{this.price}} đ</span>
+              </div>
+              <div class='main-item-product-title-right'>
+              <div class='main-up-down'>
+                <span class="prew" data-bs-id='{{this._id}}'>-</span>
+                <span>{{this.quantity}}</span>
+                <span class="next" data-bs-id='{{this._id}}'>+</span>
+                {{!-- <span></span> --}}
+              </div>
+              <span class='sum-money'>
+                {{#if this.quantity}}
+                  {{formatPrice this.price this.quantity}} đ
+                {{else}}
+                  0
+                {{/if}}
+              </span>
+            </div>
+            </div>
+            <button class='main-item-product-i i' style="background-color: transparent;border: none; " data-bs-id='{{this._id}}' id="btn-de">
+              <i class='fa-regular fa-trash-can'></i>
+            </button>
+          </div>
+        {{/each}}
+ 
+     
+      </div>
+    </div>
+    <div class='main-box-right'>
+      <div class='main-box-right-sale'>
+        <div class='main-box-right-sale-title'>
+          <h3>KHUYẾN MÃI</h3>
+          <p>Xem thêm <i class='fa-solid fa-chevron-right'></i></p>
+        </div>
+        <div class='bd-btm'>
+          <div class='discount-sale'>
+            <p class='discount-sale-10'>
+              Mã GIẢM 10% - TỐI ĐA 50k
+            </p>
+            <span class='chi-tiet'>
+              chi tiết
+            </span>
+          </div>
+          <p class='condition-sale'>
+            áp dụng cho đơn hàng khi mua Sách thuộc danh mục Tâm Linh - Luân Hồi
+            từ 150K
+          </p>
+          <div class='fhs-event-promo-item'>
+            <div class='fhs-event-promo-item-right'>
+              <div class='item-progress-bar'>
+
+              </div>
+              <div class='fhs-event-promo-item-minmax'>
+                <p class='minmax-up'>
+                  Mua thêm 150.000 đ để nhận mã
+                </p>
+                <p class='minmax-money'>
+                  150.000 đ
+                </p>
+              </div>
+            </div>
+            <button class='fhs-event-promo-item-btn'>
+              mua thêm
+            </button>
+          </div>
+        </div>
+        <div class='bd-btm'>
+          <div class='discount-sale'>
+            <p class='discount-sale-10'>
+              Mã GIẢM 10% - TỐI ĐA 50k
+            </p>
+            <span class='chi-tiet'>
+              chi tiết
+            </span>
+          </div>
+          <p class='condition-sale'>
+            áp dụng cho đơn hàng khi mua Sách thuộc danh mục Tâm Linh - Luân Hồi
+            từ 150K
+          </p>
+          <div class='fhs-event-promo-item'>
+            <div class='fhs-event-promo-item-right'>
+              <div class='item-progress-bar'>
+
+              </div>
+              <div class='fhs-event-promo-item-minmax'>
+                <p class='minmax-up'>
+                  Mua thêm 150.000 đ để nhận mã
+                </p>
+                <p class='minmax-money'>
+                  150.000 đ
+                </p>
+              </div>
+            </div>
+            <button class='fhs-event-promo-item-btn'>
+              mua thêm
+            </button>
+          </div>
+        </div>
+        <div class='cothe'>
+          Có thể áp dụng đồng thời nhiều mã
+        </div>
+      </div>
+
+      <div class='block-total-cart'>
+        <div class='total-cart-page'>
+          <p>
+            Thành tiền
+          </p>
+          <p>
+            <span class='total-money'>
+              {{sumPrice data.cart}}
+            </span>
+            đ
+          </p>
+        </div>
+
+        <div class='title-final-total'>
+          <p>
+            Tổng Số Tiền (gồm VAT)
+          </p>
+  
+          <span class='sum-money total-price' > {{sumPrice data.cart}} đ</span>
+        </div>
+
+        <a class='total-btn' href="/cart/delivery">THANH TOÁN</a>
+        <p class='block-total-cart-text'>(Giảm giá trên web chỉ áp dụng cho bán
+          lẻ)</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
+<!-- cart.hbs -->
+<form name='delete-product-form' method='POST'></form>
+<form name='ins-product-form' method='POST'></form>
+<form name='prew-product-form' method='POST'></form>
+
+
+
+<script>
+  document.querySelectorAll('.main-item-product-i').forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Lấy giá trị của thuộc tính data-bs-id
+      var id = button.getAttribute('data-bs-id');
+        deleteForm.action = '/cart/' + id + '?_method=DELETE';
+        deleteForm.submit();
+    });
+  });
+
+  document.querySelectorAll('.next').forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Lấy giá trị của thuộc tính data-bs-id
+      var id = button.getAttribute('data-bs-id');
+      var insForm = document.forms['ins-product-form'];
+      insForm.action = '/cart/' + id + '/increase-quantity'
+      insForm.submit();
+    });
+  });
+  document.querySelectorAll('.prew').forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Lấy giá trị của thuộc tính data-bs-id
+      var id = button.getAttribute('data-bs-id');
+      var prewForm = document.forms['prew-product-form'];
+      prewForm.action = '/cart/' + id + '/prew-quantity'
+      prewForm.submit();
+    });
+  });
+</script>

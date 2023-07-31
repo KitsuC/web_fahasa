@@ -1,0 +1,1436 @@
+<div class='banner-nav'>
+    <div class='container'>
+      <ul>
+        <li>
+          <a href>Trang chủ</a>
+        </li>
+        <li>></li>
+        <li>
+          <span>Xu hướng mua sắm</span>
+        </li>
+      </ul>
+    </div>
+</div>
+
+  <!-- TREND -->
+
+  <div class='trend'>
+    <div class='container'>
+      <div class='sale-content'>
+        <div class='trend-header'>
+          <img src='/public/img/Home/Trend/icon.png' alt />
+          <h2>Xu hướng mua sắm</h2>
+        </div>
+
+        <div class='sale-body'>
+          <ul class='sale-nav'>
+            <li>
+              <button>Tất cả</button>
+            </li>
+            <li>
+              <button>Văn học</button>
+            </li>
+            <li>
+              <button>Tâm lý - kỹ năng sống</button>
+            </li>
+            <li>
+              <button>Trinh thám</button>
+            </li>
+            <li>
+              <button>Thiếu nhi</button>
+            </li>
+            <li>
+              <button>Khoa học - kỹ thuật</button>
+            </li>
+            <li>
+              <button>Giáo khoa - tham khảo</button>
+            </li>
+          </ul>
+
+          {{!-- <div class='sale-filter'>
+            <span>Sắp xếp theo: </span>
+            <div class='custom-select'>
+              <select class='sale-nav-filter' name='filter' id='sort-select'>
+                <option value='name'>Trending</option>
+                <option value='low'>Giá (thấp - cao)</option>
+                <option value='hight'>Giá (cao - thấp)</option>
+                <option value='hight'>Tên (A - Z)</option>
+                <option value='hight'>Tên (Z - A)</option>
+                <option value='hight'>Bán chạy Tuần</option>
+                <option value='hight'>Bán chạy Tháng</option>
+              </select>
+              <span class='arrow'></span>
+            </div>
+          </div> --}}
+
+          <div class='sale-list mh-1499'>
+            {{#each product}}
+            <div class='sale-item'>
+              <a class='sale-item-link' href="{{this.Slug}}">
+                <img src='{{this.Image}}' alt="{{this.Name}}" />
+                <h3>{{this.Name}}</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>{{this.PriceN}} đ</span>
+                  <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                  </span>
+                </div>
+
+                <div>
+                  <a class='sale-star'>
+                    <ul>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                    </ul>
+                    <span>5.0</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          {{!-- <div class='sale-list mh-2600 toggle'>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 1.jpg' alt />
+                <h3>
+                  Combo Sách Muôn Kiếp Nhân Sinh Tập 1 + Không Diệt Không Sinh
+                  Đừng Sợ Hãi (Bộ 2 Cuốn)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>211.650 đ</span>
+                  <span>278.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.6</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 2.jpg' alt />
+                <h3>
+                  Combo Sách Giáo Trình Chuẩn HSK 1 - Sách Bài Học Và Bài Tập
+                  (Bộ 2 Cuốn)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>278.240 đ</span>
+                  <span>356.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 3.jpg' alt />
+                <h3>
+                  Combo Muôn Kiếp Nhân Sinh - Many Times, Many Lives - Tập 1 +
+                  Tập 2 + Tập 3 (Bộ 3 Tập)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>497.000 đ</span>
+                  <span>654.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 4.jpg' alt />
+                <h3>
+                  Ba Lô Clever Hippo Fancy Space Adventure - BS1220/BLUE - Màu
+                  Xanh Dương
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>737.650 đ</span>
+                  <span>899.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 5.jpg' alt />
+                <h3>
+                  Ba Lô Clever Hippo Fancy Fairy Forest - BF1224/PINK - Màu Hồng
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>757.539 đ</span>
+                  <span>884.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 6.jpg' alt />
+                <h3>
+                  Ba Lô Bé Gái Chống Gù ĐÓM Dịu Dàng HooHooHaHa® - Màu Hồng -
+                  E-BL10003
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>476.000 đ</span>
+                  <span>595.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 7.jpg' alt />
+                <h3>
+                  Balo Bé Gái Chống Gù Lớp Học Mật Ngữ - HooHooHaHa - My Closet
+                  Sparkle Cyan - Màu Xanh Da Trời - A-BL11007
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>436.000 đ</span>
+                  <span>545.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 8.jpg' alt />
+                <h3>
+                  Ba Lô Bé Gái Chống Gù ĐÓM Ngọt Ngào HooHooHaHa® - Màu Hồng -
+                  E-BL10002
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>476.200 đ</span>
+                  <span>589.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 9.jpg' alt />
+                <h3>
+                  Combo Bộ Dụng Cụ Học Tập - Cấp 2 + Cấp 3 - Bộ Số 13
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>112.000 đ</span>
+                  <span>156.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 10.jpg' alt />
+                <h3>
+                  Combo Bộ Dụng Cụ Học Tập - Cấp 2 + Cấp 3 - Bộ Số 14
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>83.100 đ</span>
+                  <span>130.000 đ</span>
+                </div>
+
+                <div>
+                  <a class='sale-star' href>
+                    <ul>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                    </ul>
+                    <span>5.0</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- 10 -->
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 11.jpg' alt />
+                <h3>
+                  Combo Bộ Dụng Cụ Học Tập - Cấp 1 - Bộ Số 1
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>125.650 đ</span>
+                  <span>149.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.6</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 12.jpg' alt />
+                <h3>
+                  MASHLE - Tập 3: Mash Burnedead Và Pháp Sư Mặt Nạ - Tặng Kèm
+                  Postcard
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>28.240 đ</span>
+                  <span>38.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 13.jpg' alt />
+                <h3>
+                  Kaguya-Sama: Cuộc Chiến Tỏ Tình - Tập 17 - Tặng Kèm Postcard
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>35.000 đ</span>
+                  <span>59.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 14.jpg' alt />
+                <h3>
+                  [Anime Comics] One Piece Stampede - Tập 2
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>72.650 đ</span>
+                  <span>88.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 15.jpg' alt />
+                <h3>
+                  [Anime Comics] One Piece Stampede - Tập 1
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>73.539 đ</span>
+                  <span>90.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 16.jpg' alt />
+                <h3>
+                  Vẫn Là Mùa Hạ Nhưng Không Còn Chúng Ta (Tái Bản 2023)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>79.000 đ</span>
+                  <span>89.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 17.jpg' alt />
+                <h3>Bộ Thiên Ca - Tập 2 - Tặng Kèm 2 Bookmark</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>134.000 đ</span>
+                  <span>150.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 18.jpg' alt />
+                <h3>
+                  Lớp Học Rùng Rợn - Tập 17 - Tặng Kèm Bộ Đôi Postcard
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>27.200 đ</span>
+                  <span>39.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 19.jpg' alt />
+                <h3>
+                  Combo Sách [Anime Comics] One Piece Stampede - Tập 1 + Tập 2
+                  (Bộ 2 Tập)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>146.000 đ</span>
+                  <span>170.000 đ</span>
+                </div>
+
+                <a class='sale-star' href>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href>
+                <img src='../../img/List/img 20.jpg' alt />
+                <h3>
+                  Mối Tình Đầu - Bản Đặc Biệt - Tặng Kèm Set Bookmark Trong Suốt
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span class='color-red'>83.100 đ</span>
+                  <span>109.000 đ</span>
+                </div>
+
+                <div>
+                  <a class='sale-star' href>
+                    <ul>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                    </ul>
+                    <span>5.0</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- 10 -->
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 1.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 1 - Chân Trời Sáng Tạo - Sách Bài Học
+                  (Bộ 9 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>186.000 đ</span>
+                  <span>209.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-15%</span>
+                  <span>Đã bán 732</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.4</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 2.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 12 - Sách Bài Tập (Bộ 11 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>164.000 đ</span>
+                  <span>180.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-14%</span>
+                  <span>Đã bán 542</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                </ul>
+                <span>5.0</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 3.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 2 - Chân Trời Sáng Tạo - Sách Bài Học
+                  (Bộ 10 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>179.000 đ</span>
+                  <span>219.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-21%</span>
+                  <span>Đã bán 457</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star'></i>
+                  </li>
+                </ul>
+                <span>4.0</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 4.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 12 - Sách Bài Học (Bộ 13 Cuốn - Không
+                  Tiếng Anh) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>163.000 đ</span>
+                  <span>180.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-17%</span>
+                  <span>Đã bán 456</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                </ul>
+                <span>5.0</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 5.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 5 - Sách Bài Học (Bộ 9 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>194.650 đ</span>
+                  <span>250.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-24%</span>
+                  <span>Đã bán 557</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.5</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 6.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 1 - Chân Trời Sáng Tạo - Sách Bài Học
+                  (Bộ 9 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>186.000 đ</span>
+                  <span>200.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-19%</span>
+                  <span>Đã bán 453</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star'></i>
+                  </li>
+                </ul>
+                <span>4.0</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 7.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 1 - Kết nối - Sách Bài Tập (Bộ 11 Cuốn)
+                  (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>126.000 đ</span>
+                  <span>160.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-25%</span>
+                  <span>Đã bán 765</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.6</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 8.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 2 - Chân Trời Sáng Tạo - Sách Bài Học
+                  (Bộ 10 Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>179.000 đ</span>
+                  <span>190.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-14%</span>
+                  <span>Đã bán 326</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star'></i>
+                  </li>
+                </ul>
+                <span>4.0</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 9.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 2 - Kết nối - Sách Bài Tập (Bộ 11 Cuốn)
+                  (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>134.000 đ</span>
+                  <span>170.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-27%</span>
+                  <span>Đã bán 541</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                </ul>
+                <span>4.9</span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 10.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 3 - Cánh Diều - Sách Bài Học (Bộ 12
+                  Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>220.000 đ</span>
+                  <span>250.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-18%</span>
+                  <span>Đã bán 386</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.5</span>
+              </div>
+            </div>
+            <div class='sale-item'>
+              <a href>
+                <img src='../../img/Home/Text Book/img 10.jpg' alt />
+                <h3>
+                  Sách Giáo Khoa Bộ Lớp 3 - Cánh Diều - Sách Bài Học (Bộ 12
+                  Cuốn) (2023)
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>220.000 đ</span>
+                  <span>250.000 đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-18%</span>
+                  <span>Đã bán 386</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.5</span>
+              </div>
+            </div>
+
+          </div> --}}
+
+        </div>
+      </div>
+    </div>
+  </div>

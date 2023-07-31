@@ -1,0 +1,34 @@
+<!-- searchResult.handlebars -->
+<div class="list mt-20">
+  <div class='container'>
+    <div class="list-content">
+      <h2>Kết quả tìm kiếm cho "{{keyword}}"</h2>
+
+      <table class='table' cellspacing="0" cellpadding="2px">
+        <thead>
+          <tr>
+            <th scope='col ' class='num'>id</th>
+            <th scope='col' class='title'>Hình ảnh</th>
+            <th scope='col' class='title'>Tên sản phẩm</th>
+            <th scope='col' class='title'>Giá</th>
+            <th scope='col' class='title'>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each product}}
+          <tr>
+            <td class='item n-i' scope='row'>{{sum @index 1}}</td>
+            <td class='item'><img class='img-td' src='{{this.Image}}' alt /></td>
+            <td class='item'>{{this.Name}}</td>
+            <td class='item'>{{this.PriceN}}</td>
+            <td class='item'>
+              <a class="trend-link list-btn" href='/admin/list/{{this._id}}/edit'>Sửa</a>
+              <a class="trend-link list-btn" href="" data-bs-toggle='modal' data-bs-target='#delete-product'>Xóa</a>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

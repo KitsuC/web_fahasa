@@ -1,0 +1,87 @@
+{{#if successMessage}}
+<div class='alert alert-success' id='flashMessage'>{{successMessage}}</div>
+{{/if}}
+{{#if errorMessage}}
+<div class='alert alert-success' id='flashMessage'>{{errorMessage}}</div>
+{{/if}}
+
+<div class='wrap-form'>
+  <h2 class='title-lr'>Đăng nhập </h2>
+  <form class='form-login' action='/login' method='POST'>
+    <div class='mb-3'>
+      <label for='exampleInputEmail1' class='form-label' >Tên đăng nhập</label>
+      <input type='text' class='form-control' name='username'  />
+    </div>
+    <div class='mb-3'>
+      <label for='exampleInputPassword1' class='form-label'>Mật khẩu</label>
+      <input type='password' class='form-control' name='password'  />
+    </div>
+    <span>Chưa có tài khoản?<a href="/register  "> Đăng ký</a></span>
+    <input value='Đăng nhập' type='submit' class='btn btn-primary btn-login' style="background-color: #c92127; border:none"/>
+  </form>
+</div>
+
+<script>
+  // Hàm kiểm tra dữ liệu nhập vào
+  function validateForm(event) {
+    event.preventDefault(); // Ngăn chặn việc gửi form đi khi nhấn submit
+    const username = document.querySelector('input[name="username"]');
+    const password = document.querySelector('input[name="password"]');
+    const usernameValue = username.value.trim();
+    const passwordValue = password.value.trim();
+
+    // Xóa các thông báo cũ và loại bỏ lớp "error"
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(element => element.remove());
+    username.classList.remove('error');
+    password.classList.remove('error');
+
+    // Kiểm tra và hiển thị thông báo đỏ
+    if (!usernameValue) {
+      const usernameError = document.createElement('p');
+      usernameError.innerText = 'Vui lòng nhập tên đăng nhập.';
+      usernameError.className = 'error-message';
+      username.parentNode.appendChild(usernameError);
+      username.classList.add('error'); // Thêm lớp "error" vào ô input
+    }
+
+    if (!passwordValue) {
+      const passwordError = document.createElement('p');
+      passwordError.innerText = 'Vui lòng nhập mật khẩu.';
+      passwordError.className = 'error-message';
+      password.parentNode.appendChild(passwordError);
+      password.classList.add('error'); // Thêm lớp "error" vào ô input
+    }
+
+    if (usernameValue && passwordValue) {
+      // Nếu đã nhập đủ dữ liệu thì submit form
+      event.target.submit();
+    }
+  }
+
+  // Lắng nghe sự kiện submit của form
+  const form = document.querySelector('.form-login');
+  form.addEventListener('submit', validateForm);
+
+  // Lắng nghe sự kiện nhập liệu trong ô input để loại bỏ màu đỏ và thông báo
+  const inputs = document.querySelectorAll('input');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      const errorElement = input.parentElement.querySelector('.error-message');
+      if (errorElement) {
+        errorElement.remove();
+      }
+    });
+  });
+</script>
+
+<style>
+  .error-message {
+    color: red;
+  }
+
+  input.error {
+    border-color: red;
+  }
+</style>

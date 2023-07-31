@@ -1,0 +1,1562 @@
+{{#if successMessage}}
+  <div class='alert alert-success' id='flashMessage'>{{successMessage}}
+    - xin chào
+    {{data.username}}</div>
+{{/if}}
+
+{{#if errorMessage}}
+  <div class='alert alert-danger' id='flashMessage'>{{errorMessage}}</div>
+{{/if}}
+<div class='wrapper'>
+  <header>
+    <div class='container'>
+      <div class='header-content'>
+
+        <div class='header-top'>
+          <div class='header-slider'>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/img 1.png' alt='' />
+            </a>
+          </div>
+
+          <div class='header-top-right'>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/img right 1.jpg' alt='' />
+            </a>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/img right 2.jpg' alt='' />
+            </a>
+          </div>
+        </div>
+
+        <ul class='header-list-img'>
+          <li>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/list img 1.png' alt='' />
+            </a>
+          </li>
+          <li>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/list img 2.png' alt='' />
+            </a>
+          </li>
+          <li>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/list img 3.png' alt='' />
+            </a>
+          </li>
+          <li>
+            <a href='/sale'>
+              <img src='/public/img/Home/header/list img 4.png' alt='' />
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU -->
+
+  <main class='menu'>
+    <div class='container'>
+      <ul class='menu-list'>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 1.png' alt='' />
+            <span>Flash Sale</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 2.png' alt='' />
+            <span>Mã Giảm Giá</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 3.png' alt='' />
+            <span>Xu hướng</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 4.png' alt='' />
+            <span>Sản Phẩm Mới</span>
+          </a>
+        </li>
+        <li>
+          <a href='/sale'>
+            <img src='/public/img/Home/menu/img 5.png' alt='' />
+            <span>Sale Thứ 3</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 6.png' alt='' />
+            <span>Văn Học</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 7.png' alt='' />
+            <span>Tâm Lý Kỹ Năng</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 8.png' alt='' />
+            <span>Manga - Comic</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 9.png' alt='' />
+            <span>Phiên Chợ Sách cũ</span>
+          </a>
+        </li>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/menu/img 10.png' alt='' />
+            <span>Kinh Tế</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- FLASH SALE -->
+
+  <main class='sale'>
+    <div class='container'>
+      <div class='sale-content'>
+
+        <div class='sale-header'>
+          <div class='sale-logo'>
+            <a href=''>
+              <img src='./public/img/Sale/Flash sale/logo.png' alt='' />
+              <h2>FLASH SALE</h2>
+            </a>
+            <span>Kết Thúc Trong</span>
+          </div>
+
+          <div class='sale-time'>
+            <div class='hour'>01</div>
+            :
+            <div class='minute'>00</div>
+            :
+            <div class='second'>00</div>
+          </div>
+        </div>
+
+        <div class='sale-body'>
+
+          <div class='sale-list mh-386'>
+
+            {{#each productR}}
+
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-54%</span>
+                    <span>Đã bán 332</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/each}}
+
+          </div>
+
+          <a class='sale-link' href='/list'>Xem Thêm</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PRODUCT -->
+
+  <main class='product'>
+    <div class='container'>
+      <div class='product-content'>
+        <div class='product-header'>
+          <span></span>
+          <h2>Danh mục sản phẩm</h2>
+        </div>
+
+        <ul class='product-list'>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 1.jpg' alt='' />
+              <span>
+                VPP
+                <br />
+                DCHS
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 2.jpg' alt='' />
+              <span>Đồ chơi</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 3.jpg' alt='' />
+              <span>Ngôn tình đam mỹ</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 4.jpg' alt='' />
+              <span>Sách học ngoại ngữ</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 5.jpg' alt='' />
+              <span>Manga</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 6.jpg' alt='' />
+              <span>Tâm linh luân hồi</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 7.jpg' alt='' />
+              <span>Tâm lý thao túng</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 8.jpg' alt='' />
+              <span>Đối mặt thức tỉnh</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 9.jpg' alt='' />
+              <span>Tiểu thuyết</span>
+            </a>
+          </li>
+
+          <li>
+            <a href=''>
+              <img src='/public/img/Home/product/img 10.jpg' alt='' />
+              <span>Night Novel</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+  <br>
+
+  <!-- TREND -->
+
+  <main class='trend'>
+    <div class='container'>
+      <div class='sale-content'>
+
+        <div class='trend-header'>
+          <img src='/public/img/Home/Trend/icon.png' alt='' />
+          <h2>Các sản phẩm mới</h2>
+        </div>
+
+        <div class='sale-body'>
+
+          <ul class='sale-nav'>
+            <li class='show-border'>
+              <button onclick='showSaleList1()'>Xu hướng theo ngày</button>
+            </li>
+            <li>
+              <button onclick='showSaleList2()'>Sách HOT - giảm sốc</button>
+            </li>
+            <li>
+              <button onclick='showSaleList3()'>Bestseller</button>
+            </li>
+          </ul>
+
+          <div class='sale-list mh-757' id='sale-list-1'>
+            {{#each product}}
+              <div class='sale-item'>
+                <a class='sale-item-link' href='/{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>{{this.Name}}</h3>
+                </a>
+
+                <div class='sale-data'>
+                  <div class='trend-price'>
+                    <span class='color-red'>{{this.PriceN}}</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+
+                  <a class='sale-star' href=''>
+                    <ul>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-regular fa-star-half-stroke'></i>
+                      </li>
+                    </ul>
+                    <span>4.6</span>
+                  </a>
+                </div>
+
+                <div class='sale-process'>
+                  <span>Đã bán 24</span>
+                  <span></span>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+
+          <div class='sale-list  mh-757 none' id='sale-list-2'>
+
+            {{#each productR}}
+              <div class='sale-item'>
+                <a class='sale-item-link' href='/{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>{{this.Name}}</h3>
+                </a>
+
+                <div class='sale-data'>
+                  <div class='trend-price'>
+                    <span class='color-red'>{{this.PriceN}}</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+
+                  <a class='sale-star' href=''>
+                    <ul>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-solid fa-star'></i>
+                      </li>
+                      <li>
+                        <i class='fa-regular fa-star-half-stroke'></i>
+                      </li>
+                    </ul>
+                    <span>4.6</span>
+                  </a>
+                </div>
+
+                <div class='sale-process'>
+                  <span>Đã bán 24</span>
+                  <span></span>
+                </div>
+              </div>
+            {{/each}}
+
+          </div>
+
+          <div class='sale-list none' id='sale-list-3'>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 21.jpg' alt='' />
+                <h3>
+                  Hiệu Sách Cuối Cùng Ở London - Tiểu Thuyết Về Chiến Tranh Thế
+                  Giới Thứ Hair</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>108.000đ</span>
+                  <span>175.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 22.jpg' alt='' />
+                <h3>Escalante - Người Thầy Xuất Sắc Nhất Nước Mỹ</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>62.000đ</span>
+                  <span>85.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 13.jpg' alt='' />
+                <h3>Arty Mouse - Cắt Dán</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>27.900 đ</span>
+                  <span>45.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 24.jpg' alt='' />
+                <h3>
+                  Bộ Sách Truyện Kể Về Người Nổi Tiếng: 20 Trí Tuệ Kiệt Xuất Làm
+                  Thay Đổi Thế Giới + 20 Người Đàn Ông Kiệt Xuất + 20 Người Phụ
+                  Nữ Phi Thường Làm Thay Đổi Thế Giới (Bộ 3 Cuốn)
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>297.900 đ</span>
+                  <span>450.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 25.jpg' alt='' />
+                <h3>
+                  Những Trí Tuệ Vĩ Đại - Tesla Nhà Phát Minh, Cha Đẻ Của Dòng
+                  Điện Xoay Chiều
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>147.250 đ</span>
+                  <span>229.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 26.jpg' alt='' />
+                <h3>
+                  Cẩm Nang Nuôi Dạy Trẻ Sơ Sinh - Từng Bước Giúp Trẻ Thông Minh
+                  Hơn: Cuốn Sách Huyền Thoại Về Nuôi Dạy Trẻ Từ 0 Tuổi
+                </h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>77.250 đ</span>
+                  <span>127.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.5</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 27.jpg' alt='' />
+                <h3>Hình Ảnh Của Bạn Đáng Giá Triệu Đô (Tái Bản 2019)</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>72.000 đ</span>
+                  <span>120.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 28.jpg' alt='' />
+                <h3>Một Phút Với Michael Porter</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>47.200 đ</span>
+                  <span>75.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 29.jpg' alt='' />
+                <h3>Bộ Bách Khoa Toàn Thư Cho Bé (2-3 Tuổi) (Bộ 8 Cuốn)</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>36.000 đ</span>
+                  <span>56.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class='sale-item'>
+              <a class='sale-item-link' href=''>
+                <img src='/public/img/Home/Trend/img 30.jpg' alt='' />
+                <h3>Những Cuộc Phiêu Lưu Của Tom Sawyer</h3>
+              </a>
+
+              <div class='sale-data'>
+                <div class='trend-price'>
+                  <span>54.250 đ</span>
+                  <span>90.000 đ</span>
+                </div>
+
+                <a class='sale-star' href=''>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star'></i>
+                    </li>
+                  </ul>
+                  <span>4.1</span>
+                </a>
+              </div>
+
+              <div class='sale-process'>
+                <span>Đã bán 24</span>
+                <span></span>
+              </div>
+            </div>
+
+          </div>
+
+          <a class='trend-link' href='/list'>Xem Thêm</a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <br>
+  <!-- TEXT BOOK -->
+
+  <main class='trend'>
+    <div class='container'>
+      <div class='sale-body'>
+        <ul class='sale-nav'>
+          <li class='show-border'>
+            <button onclick='showSGK1()'>SGK Cấp 1</button>
+          </li>
+          <li>
+            <button onclick='showSGK2()'>SGK Cấp 2</button>
+          </li>
+          <li>
+            <button onclick='showSGK3()'>SGK Cấp 3</button>
+          </li>
+
+        </ul>
+
+        <div class='sale-list mh-390' id='show-sgk-1'>
+          {{#each product}}
+            {{#if (eq Type '7')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+
+        <div class='sale-list mh-390 none' id='show-sgk-2'>
+          {{#each product}}
+            {{#if (eq Type '7')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+
+        <div class='sale-list mh-390 none' id='show-sgk-3'>
+          {{#each product}}
+            {{#if (eq Type '5')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+
+        <a class='trend-link' href='/list'>Xem Thêm</a>
+
+      </div>
+    </div>
+  </main>
+  <br>
+  <!-- NOTE BOOK -->
+
+  <main class='trend'>
+    <div class='container'>
+      <div class='sale-body'>
+        <ul class='sale-nav'>
+          <li class='show-border'>
+            <button>Tập 4 Ô Ly</button>
+          </li>
+          <li>
+            <button>Tập The Sun</button>
+          </li>
+          <li>
+            <button>Tập Elephant</button>
+          </li>
+          <li>
+            <button>Tập Hồng Hà</button>
+          </li>
+          <li>
+            <button>Các Loại Tập Khác</button>
+          </li>
+        </ul>
+
+        <div class='sale-list mh-390'>
+          {{#each product}}
+            {{#if (eq Type '10')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+
+        <a class='trend-link' href='/list'>Xem Thêm</a>
+
+      </div>
+    </div>
+  </main>
+  <br>
+
+  <!-- MANGA -->
+
+  <main class='trend'>
+    <div class='container'>
+      <div class='sale-body'>
+
+        <ul class='sale-nav'>
+          <li class='show-border'>
+            <button>Manga Mới</button>
+          </li>
+          <li>
+            <button>Top Manga</button>
+          </li>
+          <li>
+            <button>Light Novel Mới</button>
+          </li>
+          <li>
+            <button>Top Light Novel</button>
+          </li>
+        </ul>
+
+        <div class='sale-list mh-390'>
+          {{#each productN}}
+            {{#if (eq Type '5')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+
+          {{/each}}
+
+        </div>
+
+        <a class='trend-link' href='/list'>Xem Thêm</a>
+
+      </div>
+    </div>
+  </main>
+  <br>
+
+  <!-- COMBO -->
+
+  <main class='trend'>
+    <div class='container'>
+
+      <div class='trend-header'>
+        <img src='/public/img/Home/Trend/icon.png' alt='' />
+        <h2>Combo</h2>
+      </div>
+
+      <div class='sale-body'>
+        <ul class='sale-nav'>
+          <li class='show-border'>
+            <button>Tâm lý - kỹ năng sống</button>
+          </li>
+          <li>
+            <button>Kinh tế</button>
+          </li>
+          <li>
+            <button>Văn học</button>
+          </li>
+          <li>
+            <button>Ngoại ngữ</button>
+          </li>
+          <li>
+            <button>Thiếu nhi</button>
+          </li>
+        </ul>
+
+        <div class='sale-list mh-390'>
+          {{#each product}}
+            {{#if (eq Type '9')}}
+              <div class='sale-item'>
+                <a href='{{this.Slug}}'>
+                  <img src='{{this.Image}}' alt='' />
+                  <h3>
+                    {{this.Name}}
+                  </h3>
+                </a>
+
+                <div class='trend-price fld-row'>
+                  <div class='price-item'>
+                    <span>{{this.PriceN}} đ</span>
+                    <span>
+                      {{#if this.PriceO}}
+                        {{this.PriceO}} đ
+                      {{/if}}
+                    </span>
+                  </div>
+                  <div class='price-sold'>
+                    <span class='price-sale'>-15%</span>
+                    <span>Đã bán 732</span>
+                  </div>
+                </div>
+
+                <div class='trend-star'>
+                  <ul>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-solid fa-star'></i>
+                    </li>
+                    <li>
+                      <i class='fa-regular fa-star-half-stroke'></i>
+                    </li>
+                  </ul>
+                  <span>4.4</span>
+                </div>
+
+              </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+
+        <a class='trend-link' href='/list'>Xem Thêm</a>
+
+      </div>
+    </div>
+  </main>
+  <br>
+
+  <!-- CHILDREN -->
+
+  <main class='children'>
+    <div class='container'>
+      <div class='children-content'>
+
+        <div class='trend-header'>
+          <img src='/public/img/Home/Trend/icon.png' alt='' />
+          <h2>Thiếu nhi</h2>
+        </div>
+
+        <div class='sale-body'>
+          <ul class='sale-nav'>
+            <li class='show-border'>
+              <button>Sách thiếu nhi giảm sốc</button>
+            </li>
+            <li>
+              <button>Sói nhỏ wolfoo</button>
+            </li>
+            <li>
+              <button>Pepa Pig</button>
+            </li>
+            <li>
+              <button>Thế giới quanh em</button>
+            </li>
+          </ul>
+
+          <div class='children-body'>
+
+            <a class='tablet-none' href=''>
+              <img
+                class='children-img'
+                src='/public/img/Home/Children/bg.jpg'
+                alt=''
+              />
+            </a>
+
+            <div class='children-list'>
+
+              <div class='children-list-content mh-365'>
+                {{#each product}}
+                  {{#if (eq Type '11')}}
+                    <div class='children-item'>
+                      <a href='{{this.Slug}}'>
+                        <img src='{{this.Image}}' alt='' />
+
+                        <div class='children-text'>
+                          <h3>{{this.Name}}</h3>
+
+                          <div class='trend-price fld-row'>
+                            <div class='price-item'>
+                              <span>{{this.PriceN}} đ</span>
+                              <span>
+                                {{#if this.PriceO}}
+                                  {{this.PriceO}} đ
+                                {{/if}}
+                              </span>
+                            </div>
+                            <div class='price-sold'>
+                              <span class='price-sale'>-21%</span>
+                              <span>Đã bán 132</span>
+                            </div>
+                          </div>
+
+                          <div class='trend-star mobile'>
+                            <ul>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-regular fa-star-half-stroke'></i>
+                              </li>
+                            </ul>
+
+                            <span>4.5</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  {{/if}}
+                {{/each}}
+              </div>
+
+              <a class='trend-link' href='/list'>Xem Thêm</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- TOY -->
+
+  <main class='children'>
+    <div class='container'>
+      <div class='children-content'>
+
+        <div class='trend-header'>
+          <img src='/public/img/Home/Trend/icon.png' alt='' />
+          <h2>TRUYỆN TRANH</h2>
+        </div>
+
+        <div class='sale-body'>
+          <ul class='sale-nav'>
+            <li class='show-border'>
+              <button>Jujutsu Kaisen (English Edition)</button>
+            </li>
+            <li>
+              <button>Chainsaw Man (English Edition)</button>
+            </li>
+            <li>
+              <button>Spy x Family(English Edition)</button>
+            </li>
+            <li>
+              <button>Moriaty The Patriot</button>
+            </li>
+          </ul>
+
+          <div class='children-body'>
+
+            <a class='tablet-none' href=''>
+              <img
+                class='children-img'
+                src='/public/img/Home/Toy/bg.jpg'
+                alt=''
+              />
+            </a>
+
+            <div class='children-list'>
+
+              <div class='children-list-content mh-365'>
+
+                {{#each product}}
+                  {{#if (eq Type '5')}}
+                    <div class='children-item'>
+                      <a href='{{this.Slug}}'>
+                        <img src='{{this.Image}}' alt='' />
+
+                        <div class='children-text'>
+                          <h3>{{this.Name}}</h3>
+
+                          <div class='trend-price fld-row'>
+                            <div class='price-item'>
+                              <span>{{this.PriceN}} đ</span>
+                              <span>
+                                {{#if this.PriceO}}
+                                  {{this.PriceO}} đ
+                                {{/if}}
+                              </span>
+                            </div>
+                            <div class='price-sold'>
+                              <span class='price-sale'>-21%</span>
+                              <span>Đã bán 132</span>
+                            </div>
+                          </div>
+
+                          <div class='trend-star mobile'>
+                            <ul>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-solid fa-star'></i>
+                              </li>
+                              <li>
+                                <i class='fa-regular fa-star-half-stroke'></i>
+                              </li>
+                            </ul>
+
+                            <span>4.5</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  {{/if}}
+                {{/each}}
+
+              </div>
+
+              <a class='trend-link' href='/list'>Xem Thêm</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- TRADEMARK -->
+
+  <main class='trademark'>
+    <div class='container'>
+      <ul class='trademark-list'>
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 1.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 2.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 3.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 4.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 5.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 6.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 7.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 8.jpg' alt='' />
+          </a>
+        </li>
+
+        <li>
+          <a href=''>
+            <img src='/public/img/Home/Trademark/img 9.jpg' alt='' />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+

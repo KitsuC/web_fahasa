@@ -1,0 +1,27 @@
+{{#if successMessage}}
+  <div class='alert alert-success' id='flashMessage'>{{successMessage}}</div>
+{{/if}}
+
+{{#if errorMessage}}
+  <div class='alert alert-danger' id='flashMessage'>{{errorMessage}}</div>
+{{/if}}
+
+<div class="admin mt-20">
+
+  <h2>{{data.username}}</h2>
+
+  <div>
+    <a class="sale-link" href='/admin/add'>Thêm sách</a>
+    <a class="sale-link" href='/admin/list'>Quản lý sách</a>
+    <a class="sale-link" href='/admin/order'>Quản lý đơn hàng</a>
+    {{!-- <a class="sale-link" href='/admin/user'>Quản lý tài khoản</a> --}}
+  </div>
+
+</div>
+
+<script>
+
+  document.getElementById( 'flashMessage' ); setTimeout( function () {
+  flashMessage.style.display = 'none'; }, 2000 );
+
+</script>

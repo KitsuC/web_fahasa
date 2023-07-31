@@ -1,0 +1,285 @@
+.delivery {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.pt-15 {
+	padding-top: 15px;
+}
+
+.delivery-content {
+	width: 100%;
+	background-color: white;
+	border-radius: 5px;
+	padding: 16px;
+}
+
+.delivery-content h2 {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ced4da;
+	padding-bottom: 8px;
+}
+
+.delivery-form {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	padding: 12px 0;
+}
+
+.delivery-form div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.delivery-form label {
+	width: 32%;
+	color: #333333;
+}
+
+.delivery-form input,
+.delivery-form select {
+	width: 100%;
+	height: 35px;
+	outline: none;
+	background: white;
+	color: #495057;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	padding: 5px 10px;
+}
+
+.delivery-form input {
+	font-weight: 550;
+}
+
+.delivery-form input:focus {
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.delivery-form select {
+	font-size: 16px;
+	color: #444;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.delivery-btn {
+	width: 250px;
+	font-weight: bold;
+	color: #f7931e;
+	border: 1px solid #f7931e;
+	border-radius: 8px;
+	background: #ffefdc;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+/* METHOD */
+
+.method-option {
+	width: 100%;
+	display: flex;
+	gap: 100px;
+	padding: 20px 0;
+}
+
+.method-option label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.method-option label div {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+/* PAY */
+
+.pay-option {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 0;
+}
+
+.pay-option label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	cursor: pointer;
+}
+
+.pay-option div {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+/* MEMBER */
+
+.flex {
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.join-form {
+	width: 100%;
+	max-width: 446px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+	margin: 0 20px 0 50px;
+}
+
+.join-input {
+	height: 40px;
+	flex-grow: 1;
+	color: #495057;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-radius: 8px;
+	padding: 0.375rem 108px 0.375rem 1.2em;
+}
+
+.join-input::placeholder {
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: #999999;
+}
+
+.join-input:focus {
+	outline: none;
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.join-btn {
+	width: 100px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #ffffff;
+	background: #2f80ed;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 4px;
+	padding: 5px 0;
+}
+
+.member-link {
+	color: #007bff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.member-note {
+	font-size: 16px;
+	font-weight: 400;
+	color: #9fa7ab;
+	margin-left: 170px;
+}
+
+/* MONEY */
+
+.money {
+	width: 100%;
+	height: auto;
+	background: white;
+	margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.money-content {
+	width: 100%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.money-number {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 12px 40px;
+	border-bottom: 1px solid #ced4da;
+}
+
+.money-item {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 80px;
+}
+
+.money-item span:first-child {
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.money-item strong {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #f39801;
+}
+
+.money-nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 40px;
+}
+
+.money-cart {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.money-cart button {
+	border: none;
+	background: white;
+	cursor: pointer;
+}
+
+.money-nav-btn {
+	width: 300px;
+	font-weight: 700;
+	background: #c92127;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 8px 0;
+}

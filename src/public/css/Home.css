@@ -1,0 +1,358 @@
+/* HEADER */
+
+.header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0 25px;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.header-slider {
+    width: 70%;
+}
+
+.header-slider img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.header-top-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-top-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.header-list-img {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.header-list-img li {
+    width: 25%;
+}
+
+.header-list-img img {
+    width: 100%;
+}
+
+/* END HEADER */
+
+/* MENU */
+
+.menu {
+    width: 100%;
+    height: auto;
+}
+
+.menu-list {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 4px 10px;
+}
+
+.menu-list li {
+    width: 10%;
+    transition: all 0.3s ease;
+    padding-top: 5px;
+}
+
+.menu-list li:hover {
+    background: #FCDAB0;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-list img {
+    width: 40%;
+}
+
+.menu-list span {
+    min-height: 50px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    padding: 10px 5px 0;
+}
+
+/* END MENU */
+
+/* FLASH SALE */
+
+.sale {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+
+/* ...common.css */
+
+/* END SALE */
+
+/* PRODUCT */
+
+.product-content {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+.product-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #F2F4F5;
+    padding: 16px;
+}
+
+.product-header span {
+    width: 32px;
+    height: 32px;
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu_red.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.product-header h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #212121;
+    letter-spacing: 0px;
+}
+
+.product-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.product-list li {
+    width: calc((100% - 90px) / 10);
+    transition: all 0.3s ease;
+    padding-top: 5px;
+}
+
+.product-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-list a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.product-list a:hover span {
+    color: #C92127;
+}
+
+.product-list img {
+    width: 100%;
+}
+
+.product-list span {
+    min-height: 2.8em;
+    max-height: 2.8em;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: #333333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* END PRODUCT */
+
+/* TREND */
+
+/* TEXTBOOK */
+
+/* NOTEBOOK */
+
+.row {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.price-item {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-sale {
+    height: fit-content;
+    background-color: #C92127;
+    color: #fff !important;
+    font-size: 1em !important;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-decoration: none !important;
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+/* CHILDREN + TOY */
+
+.children {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.children-body {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 10px 10px 20px;
+}
+
+.children-img {
+    width: 100%;
+    height: 100%;
+}
+
+.children-list {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.children-list-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.children-list-content a {
+    display: flex;
+    gap: 10px;
+    border: 1px solid #F2F4F5;
+    padding: 8px;
+}
+
+.children-item {
+    width: calc((100% - 10px) / 2);
+    margin-bottom: 10px;
+}
+
+.children-item a {
+    transition: all 0.2s ease;
+}
+
+.children-item img {
+    width: 40%;
+}
+
+.children-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.children-text h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* END CHILDREN + TOY */
+
+/* TRADEMARK */
+
+.trademark {
+    width: 100%;
+    height: auto;
+}
+
+.trademark-list {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 15px 20px;
+}
+
+.trademark-list li {
+    width: calc(100% / 9);
+    transition: all 0.3s ease;
+}
+
+.trademark-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.trademark-list img {
+    width: 100%;
+}
+
+/* END TRADEMARK */
+
+/* MAX HEIGHT */
+
+.mh-386 {
+    max-height: 386px;
+    overflow: hidden;
+}
+
+.mh-757 {
+    max-height: 785px;
+    overflow: hidden;
+}
+
+.mh-390 {
+    max-height: 390px;
+    overflow: hidden;
+}
+
+.mh-365 {
+    max-height: 365px;
+    overflow: hidden;
+}
+
+.none {
+    display: none;
+}

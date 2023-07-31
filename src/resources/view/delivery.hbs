@@ -1,0 +1,302 @@
+{{#if login}}
+<div class="admin mt-20">
+
+  <h2>Vui lòng đăng nhập để sử dụng chức năng này</h2>
+
+  <div>
+    <a class="sale-link" href='/login'>Đăng nhập</a>
+
+  </div>
+
+</div>
+{{else}}
+  <form id="delivery-form" action='./delivery' method='POST' class="wrapper">
+    <div >
+        <main class="delivery pt-15">
+          <div class="container">
+              <div class="delivery-content">
+                <h2>Địa chỉ giao hàng</h2>
+                <div class="delivery-form">
+                    <div>
+                      <label for="recipient-name">Tên người nhận:</label>
+                      <input type="text" id="recipient-name" required name='txtName'>
+                    </div>
+
+                    <div>
+                      <label for="phone-number">Số điện thoại:</label>
+                      <input type="text" id="phone-number" required name='txtNum'>
+                    </div>
+
+                    <div>
+                      <label for="country">Quốc gia:</label>
+                      <select id="country" required name='txtNation'>
+                          <option value="Việt Nam">Việt Nam</option>
+                          <option value="Lào">Lào</option>
+                          <option value="Mỹ">Mỹ</option>
+                          <option value="Úc">Úc</option>
+                          <option value="Trung Quốc">Trung Quốc</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="province">Tỉnh/Thành phố:</label>
+                      <select id="province" required name='txtCity'>
+                          <option value="Hà Nội">Hà Nội</option>
+                          <option value="Thái Bình">Thái Bình</option>
+                          <option value="Quảng Ninh">Quảng Ninh</option>
+                          <option value="Quảng Trị">Quảng Trị</option>
+                          <option value="Quảng Nam">Quảng Nam</option>
+                          <option value="Quảng Ngãi">Quảng Ngãi</option>
+                          <option value="Quảng Bình">Quảng Bình</option>
+                          <option value="Nghệ An">Nghệ An</option>
+                          <option value="Hà Tĩnh">Hà Tĩnh</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="district">Quận/Huyện:</label>
+                      <select id="district" required name='txtDistrict'>
+                          <option value="Hai Bà Trưng">Hai Bà Trưng</option>
+                          <option value="Đống Đa">Đống Đa</option>
+                          <option value="Cầu Giấy">Cầu Giấy</option>
+                          <option value="Long Biên">Long Biên</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="ward">Phường/Xã:</label>
+                      <select id="ward" required name='txtWards'>
+                          <option value="Hàng Bột">Hàng Bột</option>
+                          <option value="Trương Định">Trương Định</option>
+                          <option value="Bạch Mai">Bạch Mai</option>
+                          <option value="Minh Khai">Minh Khai</option>
+                          <option value="Thanh Nhàn">Thanh Nhàn</option>
+                          <option value="Đồng Tâm">Đồng Tâm</option>
+                          <option value="Quỳnh Lôi">Quỳnh Lôi</option>
+                          <option value="Cầu Dền">Cầu Dền</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="address">Địa chỉ nhận hàng:</label>
+                      <input type="text" id="address" required name='txtLocation'>
+                    </div>
+
+                    {{!-- <button class="delivery-btn">Đặt làm địa chỉ mặc định</button> --}}
+                </div>
+              </div>
+          </div>
+        </main>
+        <!-- METHOD -->
+
+
+        <main class="delivery">
+          <div class="container">
+              <div class="delivery-content">
+                <h2>Phương thức vận chuyển</h2>
+
+                <div class="method-option">
+                    <label>
+                      {{!-- <input type="radio" name="shipping" value="standard" /> --}}
+                      <div>
+                          <strong>Giao hàng tiêu chuẩn: 19.000 đ</strong>
+                      </div>
+                    </label>
+                    {{!-- <label>
+                      <input type="radio" name="shipping" value="express" />
+                      <div>
+                          <strong>Giao hàng nhanh: 35.000 đ</strong>
+                          <span>Thứ Ba - 25/07</span>
+                      </div>
+                    </label> --}}
+                </div>
+
+              </div>
+          </div>
+        </main>
+        <!-- PAY -->
+        <main class="delivery">
+          <div class="container">
+              <div class="delivery-content">
+                <h2>PHƯƠNG THỨC THANH TOÁN</h2>
+
+                <div class="pay-option">
+                    {{!-- <label>
+                      <input type="radio" name="shipping" value="standard" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopayapp.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>Ví ZaloPay <a href="">Chi tiết</a></span>
+                          <span class="color-orange fw-600">
+                            Thanh toán bằng Zalopay, giảm ngay 20K cho đơn hàng từ 400K
+                          </span>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" value="standard" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopayapp.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>VN PAY <a href="">Chi tiết</a></span>
+                          <span class="color-orange fw-600">
+                            Nhập mã "QRFHS20": Giảm 10% cho đơn hàng từ 150K - Nhập mã tại VNPAY
+                          </span>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" value="express" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_airpay.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>Ví ShopeePay</span>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" value="express" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_momopay.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>Ví Momo</span>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" value="express" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopayatm.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>ATM / Internet Banking</span>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" value="express" />
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopaycc.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>Visa / Master / JCB</span>
+                      </div>
+                    </label> --}}
+                    <label>
+                      {{!-- <input type="radio" name="shipping" value="express" /> --}}
+                      <img
+                          src="https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_cashondelivery.svg?q=102374"
+                          alt="">
+                      <div>
+                          <span>Thanh toán bằng tiền mặt khi nhận hàng</span>
+                      </div>
+                    </label>
+                </div>
+              </div>
+          </div>
+        </main>
+        <!-- MEMBER -->
+        <main class="delivery">
+          <div class="container">
+              <div class="delivery-content">
+                <h2>MÃ KHUYẾN MÃI/MÃ QUÀ TẶNG</h2>
+
+                <div class="flex">
+                    <span>Mã KM/Quà tặng</span>
+                    <div class="join-form" data-aos="fade-up" data-aos-duration="3000">
+                      <input class="join-input" type="text" placeholder="Nhập mã khuyến mãi/Quà tặng">
+                      <button class="join-btn">Áp Dụng</button>
+                    </div>
+                    <span class="member-link">Chọn mã khuyến mãi</a>
+                </div>
+
+                <span class="member-note">Có thể áp dụng đồng thời nhiều mã</span>
+
+              </div>
+          </div>
+        </main>
+        <!-- CHECK -->
+        <main class="delivery">
+          <div class="container">
+              <div class="delivery-content">
+                <h2>KIỂM TRA LẠI ĐƠN HÀNG</h2>
+
+                <div class='main-cart-list-product'>
+          {{#each data.cart}}
+            <div class='main-item-product pro'> 
+              {{!-- <div class='product-box'>
+                <!-- Các phần tử khác -->
+              </div> --}}
+              <div class='main-item-product-img'>
+                <a href=''>
+                  <img src='{{this.image}}' alt='' />
+                </a>
+              </div>
+              <div class='main-item-product-title'>
+                <div class='main-item-product-title-left'>
+                  <p class='main-name-product'>
+                    {{this.name}}
+                  </p>
+                  <span class='main-product-money' money='{{this.price}}'>{{this.price}} đ</span>
+                </div>
+                <div class='main-item-product-title-right'>
+                <div class='main-up-down'>
+                  <span>{{this.quantity}}</span>
+                </div>
+                <span class='sum-money'>
+                  {{#if this.quantity}}
+                    {{formatPrice this.price this.quantity}} đ
+                  {{else}}
+                    0
+                  {{/if}}
+                </span>
+              </div>
+              </div>
+            </div>
+          {{/each}}
+  
+      
+        </div>
+
+              </div>
+          </div>
+        </main>
+        <!-- MONEY -->
+        <main class="money">
+          <div class="container">
+              <div class="money-content">
+
+                <div class="money-number">
+                    <div class="money-item">
+                      <span>Thành Tiền</span>
+                      <span> {{sumPrice data.cart}} đ</span>
+                    </div>
+
+                    <div class="money-item">
+                      <span>Phí vận chuyển (Giao hàng tiêu chuẩn)</span>
+                      <span>19.000 đ</span>
+                    </div>
+
+                    <div class="money-item">
+                      <span class="bold">Tổng Số Tiền (gồm VAT)</span>
+                      <strong> {{sumPriceFee data.cart}} đ</strong>
+                    </div>
+                </div>
+
+                <div class="money-nav">
+                    <div class="money-cart">
+                      <button>
+                          <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <a href="/cart" style="cursor: pointer; user-select: none;color: #555555; font-weight: 600;"> Quay về giỏ hàng</a>
+                    </div>
+                    <input class="money-nav-btn" value="Xác nhận thanh toán" type="submit" />            
+                </div>
+              </div>
+          </div>
+        </main>
+
+    </div>
+  </form>
+{{/if}}
+
+

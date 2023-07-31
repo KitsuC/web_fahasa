@@ -1,0 +1,260 @@
+header {
+    width: 100%;
+    height: auto;
+}
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    background: #3e82c0;
+    padding-bottom: 20px;
+}
+
+.banner-nav-sale {
+    color: #F7941E !important;
+    font-weight: 500 !important;
+}
+
+.banner-1,
+.banner-1 img,
+.banner-2,
+.banner-2 img,
+.banner-3,
+.banner-3 img,
+.banner-4,
+.banner-4 img {
+    width: 100%;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-4 {
+    margin: 20px 0;
+}
+
+/* VOUCHER */
+
+.sale-code {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.voucher {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.voucher-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.voucher-item {
+    width: calc(100% / 3);
+    display: flex;
+    background-color: white;
+    box-shadow: 0 0 8px 0 hsl(0, 0%, 30%);
+    border-radius: 10px;
+}
+
+.voucher-item-left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    border-right: 4px solid #F7931E;
+    padding: 8px;
+}
+
+.voucher-item-left h2 {
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.voucher-item-left>div:first-child {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.voucher-item-left span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.4;
+}
+
+.voucher-process {
+    width: 100%;
+    height: 10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    position: relative;
+}
+
+.voucher-item-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.voucher-time {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.voucher-time span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.voucher-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.voucher-btn button:first-child {
+    background: linear-gradient(90deg, rgba(224, 224, 224, 1) 0%, rgba(224, 224, 224, 1) 100%);
+    color: #636363;
+    border: none;
+}
+
+.voucher-btn button:last-child,
+.btn-red {
+    background-color: white;
+    color: #C92127;
+    border: 1px solid #C92127;
+    cursor: pointer;
+}
+
+.process {
+    height: 100%;
+    background-color: #28B928;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pro-100 {
+    width: 100%;
+}
+
+.pro-80 {
+    width: 80%;
+}
+
+.pro-60 {
+    width: 60%;
+}
+
+.pro-30 {
+    width: 30%;
+}
+
+.gap-10 {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.code {
+    font-weight: 700;
+    color: #F39801;
+}
+
+.btn-red {
+    width: 100%;
+    background: #C92127 !important;
+    color: white !important;
+}
+
+/* FLASH SALE */
+
+.sale {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.hide {
+    background: rgba(215, 22, 22, 0.9) !important;
+    opacity: 0.9 !important;
+}
+
+.sold-out {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sold-out-text {
+    width: 90% !important;
+    top: 70px !important;
+    left: 10px !important;
+    background: #9c9c9c !important;
+    border-radius: 5px !important;
+}
+
+.process-100 {
+    width: 90% !important;
+}
+
+/* BRAND */
+
+.brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.brand-list li {
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INFO */
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}

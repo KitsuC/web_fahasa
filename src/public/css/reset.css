@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: NunitoSans_7pt_Condensed-Regular;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, br, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

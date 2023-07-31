@@ -1,0 +1,32 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #545759;
+  --text-color-2:#7A7E7F;
+  --premium-color: #C92127;
+  --height-navbar:68px;
+  --height-navbar-search:40px;
+  --height-navbar-language:40px;
+  --height-navbar:68px;
+  --height-navbar-search:40px;
+  --height-navbar-language:40px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.app{
+  background-color: #f0f0f0 !important; 
+}

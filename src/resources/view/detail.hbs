@@ -1,0 +1,971 @@
+<div id='fb-root'></div>
+<script
+  async
+  defer
+  crossorigin='anonymous'
+  src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0'
+  nonce='uH7EAgsT'
+></script>
+
+<div class='wrapper'>
+
+  <div class='banner-nav'>
+    <div class='container'>
+      <ul>
+        <li>
+          <a href=''>{{product.Name}}</a>
+        </li>
+        {{!-- <li>
+          >
+        </li>
+        <li>
+          <a href=''></a>
+        </li> --}}
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+
+  <form class='detail' action='/cart/add' method='POST' data-product-id="{{ product._id }}">
+    <div class='container'>
+      <div class='detail-content'>
+
+        <div class='detail-img'>
+
+          <div class='detail-img-content'>
+            <ul class='detail-img-list'>
+              <li>
+                <img src='{{product.Image}}' alt='' onclick='showImage(this.src)' />
+              </li>
+            </ul>
+
+            <img class='detail-img-big' src='{{product.Image}}' alt='' />
+
+            <div id='fullscreen-image' class='fullscreen-image'>
+              <img id='fullscreen-image-src' class='fullscreen-image-src' src='' alt='' />
+              <span class='close-button' onclick='closeFullscreenImage()'>&times;</span>
+              <div class='navigation-buttons'>
+                <button class='navigation-button' id='prev-button' onclick='showPreviousImage()'>&lt;</button>
+                <button class='navigation-button' id='next-button' onclick='showNextImage()'>&gt;</button>
+              </div>
+            </div>
+          </div>
+
+          <ul class='detail-btn'>
+            <li>
+              <button type='submit' >
+                <i class='fa-solid fa-cart-shopping'></i>
+                <span>Thêm vào giỏ hàng</span>
+              </button>
+            </li>
+              <li>
+                <button type='submit'>Mua ngay</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class='detail-text'>
+          <h2 >{{product.Name}}</h2>
+
+          <ul class='detail-info'>
+            <li>
+              Nhà cung cấp:
+              <a href=''>{{product.Company}}</a>
+            </li>
+            <li>
+              Tác giả:
+              <a href=''>{{product.Author}}</a>
+            </li>
+            <li>
+              Nhà xuất bản:
+              <span>{{product.Supplier}}</span>
+            </li>
+            <li>
+              Hình thức bìa:
+              <span>{{product.Cover}}</span>
+            </li>
+          </ul>
+
+          <div class='detail-vote'>
+            <a class='detail-star' href=''>
+              <ul>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-regular fa-star-half-stroke'></i>
+                </li>
+              </ul>
+              <span>4.5</span>
+              <span>(204 đánh giá)</span>
+              <span class="cl-gray">Đã bán 412</span>
+            </a>
+          </div>
+          <br>
+
+          
+          {{!-- <div class='detail-fl-sale'>
+            <div class='detail-time'>
+              <img src='/public/img/Detail/Deatail/flash sale.svg' alt='' />
+
+              <div class='sale-time'>
+                <div class='hour'>01</div>
+                :
+                <div class='minute'>00</div>
+                :
+                <div class='second'>00</div>
+              </div>
+            </div>
+
+            <div class="detail-process">
+              <span>Đã bán 37</span>
+              <span></span>
+            </div>
+          </div> --}}
+
+          <div class='detail-price'>
+            <span>{{product.PriceN}} đ</span>
+            {{#if product.PriceO}}
+              <span>{{product.PriceO}} đ</span>
+            {{else}}
+            {{/if}}
+            <span class='price-sale'>-50%</span>
+          </div>
+
+          <ul class='detail-transport'>
+            <li>Thời gian giao hàng</li>
+            <li>
+              Giao hàng đến
+              <span>
+                <a href=''>Thay đổi</a>
+              </span>
+            </li>
+            <li>Chính sách đổi trả</li>
+            <li>
+              Đổi trả sản phẩm trong 30 ngày
+              <span>
+                <a href=''>Xem thêm</a>
+              </span>
+            </li>
+          </ul>
+
+          {{!-- <div class='detail-quantity'>
+            <span>Số lượng:</span>
+
+            <div class='quantity'>
+              <button class='minus-btn' type='button' name='button'>
+                -
+              </button>
+              <input type='text' name='quantity' value='1' />
+              <button class='plus-btn' type='button' name='button'>
+                +
+              </button>
+            </div>
+          </div> --}}
+
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+  <!-- VOUCHER -->
+
+  <main class='voucher'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header'>
+          <img
+            src='https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/event_cart_2/ico_coupon_red.svg?q=102306'
+            alt='' />
+          <h2>ƯU ĐÃI LIÊN QUAN</h2>
+        </div>
+
+        <nav class='voucher-nav'>
+          <ul>
+            <li>
+              <button>Tất cả</button>
+            </li>
+            <li>
+              <button>Mã giảm giá</button>
+            </li>
+            <li>
+              <button>Mã thanh toán</button>
+            </li>
+            <li>
+              <button>Ưu đãi khác</button>
+            </li>
+          </ul>
+          <span>
+            Có thể áp dụng nhiều mã
+            <i class='fa-solid fa-circle-info'></i>
+          </span>
+        </nav>
+
+        <div class='voucher-list-detail'>
+
+          <div class='voucher-item-detail'>
+            <img src='/public/img/Detail/Voucher/img 1.jpg' alt='' />
+            <div class='voucher-item-text'>
+              <div class='voucher-item-header'>
+                <h3>MÃ GIẢM 10K - Đơn hàng từ 150K</h3>
+                <button>Chi tiết</button>
+              </div>
+              <span>Không Áp Dụng Cho Phiếu Quà Tặng</span>
+            </div>
+          </div>
+
+          <div class='voucher-item-detail'>
+            <img src='/public/img/Detail/Voucher/img 1.jpg' alt='' />
+            <div class='voucher-item-text'>
+              <div class='voucher-item-header'>
+                <h3>MÃ GIẢM 10K - Đơn hàng từ 150K</h3>
+                <button>Chi tiết</button>
+              </div>
+              <span>Không Áp Dụng Cho Phiếu Quà Tặng</span>
+            </div>
+          </div>
+
+          <div class='voucher-item-detail'>
+            <img src='/public/img/Detail/Voucher/img 1.jpg' alt='' />
+            <div class='voucher-item-text'>
+              <div class='voucher-item-header'>
+                <h3>MÃ GIẢM 10K - Đơn hàng từ 150K</h3>
+                <button>Chi tiết</button>
+              </div>
+              <span>Không Áp Dụng Cho Phiếu Quà Tặng</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PRODUCT SAME -->
+
+  <main class='product-same'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header'>
+          <i class='fa-solid fa-book-open-reader'></i>
+          <h2>SẢN PHẨM LIÊN QUAN</h2>
+        </div>
+
+        {{! <nav class='voucher-nav mb-0'>
+          <ul>
+            <li>
+              <button>Cùng tác giả</button>
+            </li>
+            <li>
+              <button>Cùng nhà xuất bản</button>
+            </li>
+          </ul>
+        </nav> }}
+
+        <div class='sale-list pd mh-397'>
+
+          {{#each products}}
+
+            <div class='sale-item mw-362'>
+              <a href='{{this.Slug}}'>
+                <img src='{{this.Image}}' alt='' />
+                <h3>
+                  {{this.Name}}
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>{{this.PriceN}} đ</span>
+                  <span>{{this.PriceO}} đ</span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-36%</span>
+                  <span>Đã bán 432</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.4</span>
+              </div>
+
+            </div>
+
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- INTRODUCE -->
+
+  <main class='voucher'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header'>
+          <i class='fa-solid fa-book-open'></i>
+          <h2>FAHASA GIỚI THIỆU</h2>
+        </div>
+
+        <div class='sale-list pd mh-397'>
+          {{#each producta}}
+            <div class='sale-item mw-362'>
+              <a href='{{this.Slug}}'>
+                <img src='{{this.Image}}' alt='' />
+                <h3>
+                  {{this.Name}}
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>{{this.PriceN}} đ</span>
+                  <span>
+                    {{#if this.PriceO}}
+                      {{this.PriceO}}
+                      đ
+                    {{/if}}
+                  </span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-26%</span>
+                  <span>Đã bán 432</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.4</span>
+              </div>
+
+            </div>
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ALSO -->
+
+  <main class='product-same'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header'>
+          <i class='fa-solid fa-book'></i>
+          <h2>SẢN PHẨM CÙNG MUA</h2>
+        </div>
+
+        <div class='sale-list pd mh-397'>
+          {{#each producta2}}
+            <div class='sale-item mw-362'>
+              <a href='{{this.Slug}}'>
+                <img src='{{this.Image}}' alt='' />
+                <h3>
+                  {{this.Name}}
+                </h3>
+              </a>
+
+              <div class='trend-price fld-row'>
+                <div class='price-item'>
+                  <span>{{this.PriceN}} đ</span>
+                  <span>
+                    {{#if this.PriceO}}
+                      {{this.PriceO}}
+                      đ
+                    {{/if}}
+                  </span>
+                </div>
+                <div class='price-sold'>
+                  <span class='price-sale'>-26%</span>
+                  <span>Đã bán 432</span>
+                </div>
+              </div>
+
+              <div class='trend-star'>
+                <ul>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star-half-stroke'></i>
+                  </li>
+                </ul>
+                <span>4.4</span>
+              </div>
+
+            </div>
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- INFO -->
+
+  <main class='voucher'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header'>
+          <i class='fa-solid fa-circle-info'></i>
+          <h2>Thông tin sản phẩm</h2>
+        </div>
+
+        <div class='product-info'>
+          <ul>
+            <li class='info-label'>Mã hàng</li>
+            <li class='info-text'>{{product._id}}</li>
+            <li class='info-label'>Tên Nhà Cung Cấp</li>
+            <li class='info-text'>
+              <a href=''>{{product.Supplier}}</a>
+            </li>
+            <li class='info-label'>Tác giả</li>
+            <li class="info-text">
+              <a href=''>{{product.Author}}</a>
+            </li>
+            <li class='info-label'>Người dịch</li>
+            <li class='info-text'>Nguyễn Phương Thảo</li>
+            <li class='info-label'>NXB</li>
+            <li class='info-text'>{{product.Supplier}}</li>
+            <li class='info-label'>Năm XB</li>
+            <li class='info-text'>2022</li>
+            <li class='info-label'>Ngôn ngữ</li>
+            <li class='info-text'>Tiếng Việt</li>
+            <li class='info-label'>Trọng lượng (gr)</li>
+            <li class='info-text'>410</li>
+            <li class='info-label'>Kích Thước Bao Bì</li>
+            <li class='info-text'>20.5 x 14.5 cm</li>
+            <li class='info-label'>Số trang</li>
+            <li class='info-text'>404</li>
+            <li class='info-label'>Hình thức</li>
+            <li class='info-text'>Bìa mềm</li>
+            <li class='info-label'>Sản phẩm hiển thị trong</li>
+            <li class='info-item'>
+              <ul>
+                <li>
+                  <a href=''>Minh Long</a>
+                </li>
+                <li>
+                  <a href=''>Tủ Sách Tâm Lý Kỹ Năng</a>
+                </li>
+                <li>
+                  <a href=''>VNPAY</a>
+                </li>
+                <li>
+                  <a href=''>RƯỚC DEAL LINH ĐÌNH VUI ĐÓN TRUNG THU</a>
+                </li>
+              </ul>
+            </li>
+            <li class='info-label'>Sản phẩm bán chạy nhất</li>
+            <li>
+              <a href=''>Top 100 sản phẩm Kỹ năng sống bán chạy của tháng</a>
+            </li>
+          </ul>
+          <p>
+            Giá sản phẩm trên Fahasa.com đã bao gồm thuế theo luật hiện hành.
+            Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng
+            mà có thể phát sinh thêm chi phí khác như Phụ phí đóng gói, phí vận
+            chuyển, phụ phí hàng cồng kềnh,...
+          </p>
+          <span>
+            Chính sách khuyến mãi trên Fahasa.com không áp dụng cho Hệ thống Nhà
+            sách Fahasa trên toàn quốc.
+          </span>
+        </div>
+
+        <b>{{product.Name}}</b>
+
+        <div class='info-btn'>
+          <a class='trend-link' href=''>Xem Thêm</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- VOTE -->
+
+  <main class='product-same'>
+    <div class='container'>
+      <div class='voucher-content'>
+
+        <div class='voucher-header vote-cl-icon'>
+          <i class='fa-solid fa-star'></i>
+          <h2>Đánh giá sản phẩm</h2>
+        </div>
+
+        <div class='vote-header'>
+
+          <div class='vote-data'>
+            <div class='vote-number'>
+              <div class='vote-number-content'>
+                <span>4.5</span>
+                <span>/ 5</span>
+              </div>
+              <ul class='vote-star'>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star'></i>
+                </li>
+                <li>
+                  <i class='fa-solid fa-star-half-stroke'></i>
+                </li>
+              </ul>
+              <span class='number-vote'>(3 đánh giá)</span>
+            </div>
+
+            <div class='vote-process'>
+
+              <div class='vote-process-item'>
+                <span>5 sao</span>
+                <div class='progress-bar'>
+                  <div class='progress'></div>
+                </div>
+                <span>90%</span>
+              </div>
+              <div class='vote-process-item'>
+                <span>4 sao</span>
+                <div class='progress-bar'>
+                  <div class='progress pro-10'></div>
+                </div>
+                <span>10%</span>
+              </div>
+              <div class='vote-process-item'>
+                <span>3 sao</span>
+                <div class='progress-bar'>
+                  <div class='progress pro-0'></div>
+                </div>
+                <span>0%</span>
+              </div>
+              <div class='vote-process-item'>
+                <span>2 sao</span>
+                <div class='progress-bar'>
+                  <div class='progress pro-0'></div>
+                </div>
+                <span>0%</span>
+              </div>
+              <div class='vote-process-item'>
+                <span>1 sao</span>
+                <div class='progress-bar'>
+                  <div class='progress pro-0'></div>
+                </div>
+                <span>0%</span>
+              </div>
+            </div>
+          </div>
+          <span class='vote-label'>
+            Chỉ có thành viên mới có thể viết nhận xét. Vui lòng
+            <a href=''>đăng nhập</a>
+            hoặc
+            <a href=''>đăng ký</a>.
+          </span>
+
+        </div>
+
+        <div class='vote-body'>
+          <nav class='voucher-nav'>
+            <ul>
+              <li>
+                <button>Mới nhất</button>
+              </li>
+              <li>
+                <button>Cũ nhất</button>
+              </li>
+              <li>
+                <button>Yêu thích nhất</button>
+              </li>
+            </ul>
+          </nav>
+
+          <div class='vote-list'>
+
+            <div class='vote-item pt-0'>
+              <div class='vote-user'>
+                <img src='/public/img/Detail/Vote/avt 1.jpg' alt='' />
+
+                <div class='vote name'>
+                  <b>Bùi Minh Phượng</b>
+                  <div class='vote-time'>
+                    <i>04/09/2020</i>
+                    <i>09:55</i>
+                  </div>
+                </div>
+              </div>
+
+              <div class='vote-text'>
+                <ul class='vote-star fl-start'>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                </ul>
+
+                <p>
+                  Đây là lần đầu mình đặt sách ở đây và đến lúc nhận hàng thì
+                  thấy khá ưng, gói hàng rất kĩ và không ngờ giao hàng nhanh đến
+                  vậy 😊 Sách rất đẹp và không bị loang chữ 👍
+                </p>
+
+                <ul class='vote-img'>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 1.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 2.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 3.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 4.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                </ul>
+
+                <div id='fullscreen-image' class='fullscreen-image'>
+                  <img id='fullscreen-image-src' class='fullscreen-image-src' src='' alt='' />
+                  <span class='close-button' onclick='closeFullscreenImage()'>&times;</span>
+                  <div class='navigation-buttons'>
+                    <button class='navigation-button' id='prev-button' onclick='showPreviousImage()'>&lt;</button>
+                    <button class='navigation-button' id='next-button' onclick='showNextImage()'>&gt;</button>
+                  </div>
+                </div>
+
+                <div class='vote-interac'>
+                  <button class='vote-like' tabindex='0'>
+                    <i class='fa-solid fa-thumbs-up'></i>
+                    <span>Thích</span>
+                    <span>(2)</span>
+                  </button>
+
+                  <button class='vote-report'>
+                    <i class='fa-solid fa-circle-info'></i>
+                    <span>Báo cáo</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class='vote-item'>
+              <div class='vote-user'>
+                <img src='/public/img/Detail/Vote/avt 2.jpg' alt='' />
+
+                <div class='vote name'>
+                  <b>Hoa Nguyen</b>
+                  <div class='vote-time'>
+                    <i>15/11/2022</i>
+                    <i>15:41</i>
+                  </div>
+                </div>
+              </div>
+
+              <div class='vote-text'>
+                <ul class='vote-star fl-start'>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                </ul>
+
+                <p>
+                  Giao hàng nhanh, gói đẹp còn cả túi nilong bọc ngoài. Có
+                  bookmark, chất lượng chữ in, giấy rất tốt. Nội dung thì mình
+                  chưa kịp thẩm hết nhưng đọc sơ qua cũng khá là hay.
+                </p>
+
+                <ul class='vote-img'>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 7.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 8.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 9.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                </ul>
+
+                <div id='fullscreen-image' class='fullscreen-image'>
+                  <img id='fullscreen-image-src' class='fullscreen-image-src' src='' alt='' />
+                  <span class='close-button' onclick='closeFullscreenImage()'>&times;</span>
+                  <div class='navigation-buttons'>
+                    <button class='navigation-button' id='prev-button' onclick='showPreviousImage()'>&lt;</button>
+                    <button class='navigation-button' id='next-button' onclick='showNextImage()'>&gt;</button>
+                  </div>
+                </div>
+
+                <div class='vote-interac'>
+                  <button class='vote-like' tabindex='0'>
+                    <i class='fa-solid fa-thumbs-up'></i>
+                    <span>Thích</span>
+                    <span>(1)</span>
+                  </button>
+
+                  <button class='vote-report'>
+                    <i class='fa-solid fa-circle-info'></i>
+                    <span>Báo cáo</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class='vote-item'>
+              <div class='vote-user'>
+                <img src='/public/img/Detail/Vote/avt 3.jpg' alt='' />
+
+                <div class='vote name'>
+                  <b>Anh Minh</b>
+                  <div class='vote-time'>
+                    <i>03/05/2023</i>
+                    <i>22:14</i>
+                  </div>
+                </div>
+              </div>
+
+              <div class='vote-text'>
+                <ul class='vote-star fl-start'>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-solid fa-star'></i>
+                  </li>
+                  <li>
+                    <i class='fa-regular fa-star'></i>
+                  </li>
+                </ul>
+
+                <p>
+                  Sách đẹp chữ in đậm rõ nét. Đóng gói còn hơi sơ sài nên bị
+                  trầy nhẹ ở góc sách nhưng nói chung vẫn ổn 🙂
+                </p>
+
+                <ul class='vote-img'>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 10.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 11.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src='/public/img/Detail/Deatail/img 12.jpg'
+                      alt=''
+                      onclick='showImage(this.src)'
+                    />
+                  </li>
+                </ul>
+
+                <div id='fullscreen-image' class='fullscreen-image'>
+                  <img id='fullscreen-image-src' class='fullscreen-image-src' src='' alt='' />
+                  <span class='close-button' onclick='closeFullscreenImage()'>&times;</span>
+                  <div class='navigation-buttons'>
+                    <button class='navigation-button' id='prev-button' onclick='showPreviousImage()'>&lt;</button>
+                    <button class='navigation-button' id='next-button' onclick='showNextImage()'>&gt;</button>
+                  </div>
+                </div>
+
+                <div class='vote-interac'>
+                  <button class='vote-like' tabindex='0'>
+                    <i class='fa-solid fa-thumbs-up'></i>
+                    <span>Thích</span>
+                    <span>(0)</span>
+                  </button>
+
+                  <button class='vote-report'>
+                    <i class='fa-solid fa-circle-info'></i>
+                    <span>Báo cáo</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FB COMMENT -->
+
+  <main class='voucher'>
+    <div class='container'>
+      <div class='voucher-content'>
+        <div class='voucher-header fb-color'>
+          <i class='fa-brands fa-facebook'></i>
+          <h2>Bình luận trên Facebook</h2>
+        </div>
+
+        <div class='comment'>
+          <div
+            class='fb-comments'
+            data-href='https://developers.facebook.com/docs/plugins/comments#configurator'
+            data-width='1200'
+            data-numposts='1'
+          ></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- POLICY -->
+
+  <main class='policy'>
+    <div class='container'>
+      <ul class='policy-list'>
+        <li>
+          <img src='/public/img/Detail/Policy/img 1.png' alt='' />
+          <button>Chính Sách Khách Sỉ</button>
+        </li>
+        <li>
+          <img src='/public/img/Detail/Policy/img 2.png' alt='' />
+          <button>Thời Gian Giao Hàng</button>
+        </li>
+        <li>
+          <img src='/public/img/Detail/Policy/img 3.png' alt='' />
+          <button>Chính Sách Đổi Trả</button>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- FORM -->
+
+</div>
+
+<style>
+  .mw-362{ min-height: 362px; }
+</style>

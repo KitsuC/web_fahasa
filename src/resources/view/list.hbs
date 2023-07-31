@@ -1,0 +1,121 @@
+
+<div class="list mt-20">
+  <div class='container'>
+    <div class="list-content">
+      <h2>Danh sách sản phẩm</h2>
+
+
+
+      <table class='table' cellspacing="0" cellpadding="2px">
+        <thead>
+          <tr>
+            <th scope='col ' class='num'>id</th>
+            <th scope='col' class='title'>Hình ảnh</th>
+            <th scope='col' class='title'>Tên sản phẩm</th>
+            <th scope='col' class='title'>Giá</th>
+            <th scope='col' class='title'>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <div id="productList">
+            {{#each product}}
+              <tr>
+                <td class='item n-i' scope='row'>{{sum @index 1}}</td>
+                <td class='item'><img class='img-td' src='{{this.Image}}' alt /></td>
+                <td class='item'>{{this.Name}}</td>
+                <td class='item'>{{this.PriceN}}</td>
+                <td class='item'>
+                  <a class="trend-link list-btn" href='/admin/list/{{this._id}}/edit'>Sửa</a>
+                  <a
+              href=''
+              class=' trend-link list-btn'
+              data-bs-toggle='modal'
+              data-bs-target='#delete-product'
+              data-bs-id='{{this._id}}'
+            >Xóa</a>
+                </td>
+              </tr>
+            {{/each}}
+          </div>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{! Cf delete product }}
+<div class='modal fade' tabindex='-1' id='delete-product'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Xóa sản phẩm?</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <div class='modal-body'>
+        <p>Bạn chắc chắn muốn xóa sản phẩm này?</p>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-danger' id='btn-delete-product'>Xóa
+          bỏ</button>
+        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{! Delete hiden form }}
+<form name='delete-product-form' method='POST'></form>
+
+<script>
+const apiUrl = "//list"; 
+// Hàm để hiển thị danh sách sản phẩm
+function displayProducts(productsData) {
+  const productListElement = document.getElementById("productList");
+  productListElement.innerHTML = ""; // Xóa nội dung cũ
+
+  productsData.forEach(product => {
+    const listItem = document.createElement("tr");
+    listItem.innerHTML = `
+      <td class='item n-i' scope='row'>${product.id}</td>
+      <td class='item'><img class='img-td' src='${product.Image}' alt /></td>
+      <td class='item'>${product.Name}</td>
+      <td class='item'>${product.PriceN}</td>
+      <td class='item'>
+        <a class="trend-link list-btn" href='/admin/list/${product._id}/edit'>Sửa</a>
+        <a class="trend-link list-btn" href="" data-bs-toggle='modal' data-bs-target='#delete-product'  >Xóa</a>
+      </td>
+    `;
+    productListElement.appendChild(listItem);
+  });
+}
+
+// Hàm tìm kiếm sản phẩm theo tên
+function searchProducts() {
+   console.log("Search button clicked"); 
+  const searchInput = document.getElementById("searchInput");
+  const keyword = searchInput.value.trim().toLowerCase();
+
+  if (keyword === "") {
+    displayProducts(products); // Hiển thị lại toàn bộ danh sách nếu không có từ khóa tìm kiếm
+  } else {
+    const filteredProducts = products.filter(product => 
+      product.Name.toLowerCase().includes(keyword)
+    );
+    displayProducts(filteredProducts); // Hiển thị danh sách sản phẩm sau khi tìm kiếm
+  }
+}
+
+// Xử lý sự kiện khi người dùng ấn nút tìm kiếm
+document.getElementById("searchButton").addEventListener("click", searchProducts);
+
+// Lấy danh sách sản phẩm từ server và hiển thị ban đầu
+let products = [];
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    products = data; // Lưu danh sách sản phẩm vào biến products
+    displayProducts(products); // Hiển thị danh sách sản phẩm ban đầu
+  })
+  .catch(error => console.error("Error fetching products:", error));
+
+</script>

@@ -1,0 +1,60 @@
+<div class="edit mt-20">
+  <div class='container'>
+
+    <div class="edit-content">
+      <h2>Cập nhật đơn hàng</h2>
+      <form action='/admin/order/{{product._id}}?_method=PUT' method='POST'>
+        <div class='mb-3'>
+          <label for='name' class='form-label'>Tên khách hàng</label>
+          <input type='text' value='{{product.Name}}' id='name' class='form-control' name='Name' readonly/>
+        </div>
+        <div class='mb-3'>
+          <label for='priceO' class='form-label'>Số điện thoại</label>
+          <input type='text' value='{{product.Number}}' id='priceO' class='form-control' name='Number' readonly/>
+        </div>
+        <div class='mb-3'>
+          <label for='priceN' class='form-label'>Quốc gia </label>
+          <input type='text' value='{{product.Nation}}' id='priceN' class='form-control' name='Nation' readonly/>
+        </div>
+       <div class='mb-3'>
+          <label for='priceN' class='form-label'>Thành phố </label>
+          <input type='text' value='{{product.City}}' id='priceN' class='form-control' name='City' readonly/>
+        </div>
+        <div class='mb-3'>
+          <label for='author' class='form-label'>Đường</label>
+          <input type='text' value='{{product.District}}' id='author' class='form-control' name='District'readonly />
+        </div>
+        <div class='mb-3'>
+          <label for='cpn' class='form-label'>Phường Xã</label>
+          <input type='text' value='{{product.Wards}}' id='cpn' class='form-control' name='Wards' readonly/>
+        </div>
+        <div class='mb-3'>
+          <label for='supplier' class='form-label'>Địa chỉ cụ thể</label>
+          <input type='text' value='{{product.Location}}' id='supplier' class='form-control' name='Location'readonly />
+        </div>
+        <div class='mb-3'>
+          <label for='cv' class='form-label'>Trạng thái đơn </label>
+          {{!-- <input type='text' value='{{product.Cover}}' id='cv' class='form-control' name='txtCv' /> --}}
+         <div style="display: flex;">
+           <label for='cv' class='form-label' id="selected-option-label">{{product.Status}}</label>
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" onchange="updateLabel()" style="width:294px" name="Status">
+            <option value="Chờ xác nhận">Chờ xác nhận</option>
+            <option value="Chờ lấy hàng">Chờ lấy hàng</option>
+            <option value="Đang giao hàng">Đang giao hàng</option>
+            <option value="Đơn hàng được giao thành công">Đơn hàng được giao thành công</option>
+          </select>
+         </div>
+        </div>
+        <button type='submit' class='sale-link add-btn'>Lưu lại</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function updateLabel() {
+    const selectedOption = document.getElementById('floatingSelect').value;
+    document.getElementById('selected-option-label').textContent = selectedOption;
+  }
+</script>
